@@ -2,7 +2,7 @@
 
 DISTNAME=	gts-snapshot
 SNAPDATE=	121130
-PKGNAME=	gts.${SNAPDATE}
+PKGNAME=	gts-0.7.6.${SNAPDATE}
 CATEGORIES=	graphics
 MASTER_SITES=	http://gts.sf.net/
 
