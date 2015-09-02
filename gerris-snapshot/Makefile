@@ -19,23 +19,21 @@ USE_TOOLS+=	pkg-config pax
 USE_LANGUAGES+=	 c c++ fortran77
 
 PKGCONFIG_OVERRIDE+=	src/gerris2D.pc.in
-PKGCONFIG_OVERRIDE+=	src/gerris2D3.pc.in
+#PKGCONFIG_OVERRIDE+=	src/gerris2D3.pc.in
 PKGCONFIG_OVERRIDE+=	src/gerris3D.pc.in
 
 REPLACE_PYTHON+=	doc/examples/gfs2doc.in
-DOCDIR=	${PREFIX}/share/doc/gerris/html
 
-pre-configure:
-	${CP} ${PREFIX}/lib/pkgconfig/gts.pc ${BUILDLINK_DIR}/lib/pkgconfig
+#DOCDIR=	${PREFIX}/share/doc/gerris/html
 
-post-install:
-	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
-	cd ${WRKSRC}/doc/html && pax -rw -pp . \
-		${DESTDIR}${PREFIX}/share/doc/gerris/html
-	${INSTALL_DATA} ${WRKSRC}/doc/tutorial/tutorial.pdf \
-		${DESTDIR}${PREFIX}/share/doc/gerris
-	${INSTALL_DATA} ${WRKSRC}/doc/faq/faq.pdf \
-		${DESTDIR}${PREFIX}/share/doc/gerris
+# post-install:
+# 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
+# 	cd ${WRKSRC}/doc/html && pax -rw -pp . \
+# 		${DESTDIR}${PREFIX}/share/doc/gerris/html
+# 	${INSTALL_DATA} ${WRKSRC}/doc/tutorial/tutorial.pdf \
+# 		${DESTDIR}${PREFIX}/share/doc/gerris
+# 	${INSTALL_DATA} ${WRKSRC}/doc/faq/faq.pdf \
+# 		${DESTDIR}${PREFIX}/share/doc/gerris
 
 .include "options.mk"
 
