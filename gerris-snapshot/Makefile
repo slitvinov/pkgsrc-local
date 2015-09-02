@@ -35,10 +35,12 @@ REPLACE_PYTHON+=	doc/examples/gfs2doc.in
 # 	${INSTALL_DATA} ${WRKSRC}/doc/faq/faq.pdf \
 # 		${DESTDIR}${PREFIX}/share/doc/gerris
 
+TEST_ENV+=		LD_LIBRARY_PATH=${PREFIX}/lib
 TEST_TARGET=		check
 
 .include "options.mk"
 
+.include "../../devel/netcdf/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../wip/gts-snapshot/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
