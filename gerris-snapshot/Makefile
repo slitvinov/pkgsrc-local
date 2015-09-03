@@ -35,7 +35,7 @@ REPLACE_PYTHON+=	doc/examples/gfs2doc.in
 # 	${INSTALL_DATA} ${WRKSRC}/doc/faq/faq.pdf \
 # 		${DESTDIR}${PREFIX}/share/doc/gerris
 
-TEST_ENV+=		LD_LIBRARY_PATH=${PREFIX}/lib
+TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/modules/
 TEST_TARGET=		check
 
 .include "options.mk"
