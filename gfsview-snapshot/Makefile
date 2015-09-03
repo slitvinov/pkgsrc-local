@@ -1,6 +1,8 @@
 # $NetBSD$
 
 DISTNAME=	gfsview-snapshot
+SNAPDATE=	121130
+PKGNAME=	gfsview-0.9.2.${SNAPDATE}
 CATEGORIES=	wip
 MASTER_SITES=	http://gerris.dalembert.upmc.fr/gerris/
 
@@ -9,7 +11,7 @@ HOMEPAGE=	http://gerris.dalembert.upmc.fr/gerris/
 COMMENT=	TODO: Short description of the package
 #LICENSE=	# TODO: (see mk/license.mk)
 
-WRKSRC=		${WRKDIR}/gfsview-snapshot-121130
+WRKSRC=		${WRKDIR}/gfsview-snapshot-${SNAPDATE}
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 
