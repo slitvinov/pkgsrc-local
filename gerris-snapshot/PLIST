@@ -82,6 +82,8 @@ lib/gerris/libstokes2D.la
 lib/gerris/libstokes3D.la
 lib/gerris/libterrain2D.la
 lib/gerris/libterrain3D.la
+lib/gerris/libtide2D.la
+lib/gerris/libtide3D.la
 lib/gerris/libtopics2D.la
 lib/gerris/libtopics3D.la
 lib/libgfs2D.la
