@@ -40,6 +40,7 @@ TEST_TARGET=		check
 
 .include "options.mk"
 
+.include "../../parallel/mpi-ch/buildlink3.mk"
 .include "../../devel/netcdf/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../wip/gts-snapshot/buildlink3.mk"
