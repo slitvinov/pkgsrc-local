@@ -8,8 +8,8 @@ MASTER_SITES=	http://gerris.dalembert.upmc.fr/gerris/
 
 MAINTAINER=	slitvinov@gmail.com
 HOMEPAGE=	http://gerris.dalembert.upmc.fr/gerris/
-COMMENT=	TODO: Short description of the package
-#LICENSE=	# TODO: (see mk/license.mk)
+COMMENT=	A graphical viewer for Gerris simulation files
+LICENSE=	gnu-gpl-v2
 
 WRKSRC=		${WRKDIR}/gfsview-snapshot-${SNAPDATE}
 GNU_CONFIGURE=	yes
