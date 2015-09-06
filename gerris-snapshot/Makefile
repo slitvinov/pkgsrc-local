@@ -44,6 +44,5 @@ TEST_TARGET=		check
 .include "../../devel/netcdf/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../wip/gts-snapshot/buildlink3.mk"
-.include "../../devel/glib2/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
