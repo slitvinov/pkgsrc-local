@@ -17,6 +17,7 @@ USE_LIBTOOL=	yes
 
 USE_TOOLS+=	pkg-config
 
+.include "../../x11/xcb-util/buildlink3.mk"
 .include "../../parallel/mpi-ch/buildlink3.mk"
 .include "../../x11/startup-notification/buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
