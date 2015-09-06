@@ -11,12 +11,12 @@ MAINTAINER=	slitvinov@gmail.com
 HOMEPAGE=	http://gfs.sourceforge.net/wiki/index.php/Main_Page
 COMMENT=	Software the solution of the PDE describing fluid flow
 WRKSRC=		${WRKDIR}/gerris-snapshot-${SNAPDATE}
-#LICENSE=	# TODO: (see mk/license.mk)
+LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
 USE_TOOLS+=	pkg-config pax
-USE_LANGUAGES+=	 c c++ fortran77
+USE_LANGUAGES=	c fortran77
 
 PKGCONFIG_OVERRIDE+=	src/gerris2D.pc.in
 #PKGCONFIG_OVERRIDE+=	src/gerris2D3.pc.in
@@ -38,10 +38,10 @@ REPLACE_PYTHON+=	doc/examples/gfs2doc.in
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/modules/
 TEST_TARGET=		check
 
-.include "options.mk"
-
 .include "../../parallel/mpi-ch/buildlink3.mk"
 .include "../../devel/netcdf/buildlink3.mk"
+.include "../../devel/glib2/buildlink3.mk"
+.include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../wip/gts-snapshot/buildlink3.mk"
 .include "../../lang/python/application.mk"

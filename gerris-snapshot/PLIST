@@ -3,6 +3,7 @@ bin/bat2gts
 bin/darcs2dist
 bin/gerris2D
 bin/gerris3D
+bin/gfs-highlight
 bin/gfs2doc
 bin/gfs2gfs
 bin/gfs2oogl2D
@@ -11,7 +12,6 @@ bin/gfscombine2D
 bin/gfscombine3D
 bin/gfscompare2D
 bin/gfscompare3D
-bin/gfs-highlight
 bin/gfsjoin
 bin/gfsjoin2D
 bin/gfsjoin3D
@@ -93,13 +93,13 @@ lib/pkgconfig/gerris3D.pc
 man/man1/bat2gts.1
 man/man1/gerris2D.1
 man/man1/gerris3D.1
+man/man1/gfs-config.1
+man/man1/gfs-highlight.1
 man/man1/gfs2gfs.1
 man/man1/gfs2oogl2D.1
 man/man1/gfs2oogl3D.1
 man/man1/gfscompare2D.1
 man/man1/gfscompare3D.1
-man/man1/gfs-config.1
-man/man1/gfs-highlight.1
 man/man1/gfsjoin.1
 man/man1/gfsjoin2D.1
 man/man1/gfsjoin3D.1
@@ -113,9 +113,9 @@ man/man1/streamanime.1
 man/man1/xyz2rsurface.1
 share/gerris/build_function
 share/gerris/gerris.dic
-share/gerris/gfs2tex.py
-share/gerris/gfs.hva
 share/gerris/gfs-keywords.el
+share/gerris/gfs.hva
+share/gerris/gfs2tex.py
 share/gerris/gfs.lang
 share/gerris/gfs-mode.el
 share/gerris/gfs.php
