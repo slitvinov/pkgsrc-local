@@ -15,7 +15,7 @@ LICENSE=	gnu-gpl-v3
 
 GNU_CONFIGURE=	yes
 USE_LIBTOOL=	yes
-USE_TOOLS+=	pkg-config pax
+USE_TOOLS+=	pkg-config pax autoconf automake autoreconf
 USE_LANGUAGES=	c fortran77
 
 PKGCONFIG_OVERRIDE+=	src/gerris2D.pc.in
@@ -24,16 +24,8 @@ PKGCONFIG_OVERRIDE+=	src/gerris3D.pc.in
 
 REPLACE_PYTHON+=	doc/examples/gfs2doc.in
 
-#DOCDIR=	${PREFIX}/share/doc/gerris/html
-
-# post-install:
-# 	${INSTALL_DATA_DIR} ${DESTDIR}${DOCDIR}
-# 	cd ${WRKSRC}/doc/html && pax -rw -pp . \
-# 		${DESTDIR}${PREFIX}/share/doc/gerris/html
-# 	${INSTALL_DATA} ${WRKSRC}/doc/tutorial/tutorial.pdf \
-# 		${DESTDIR}${PREFIX}/share/doc/gerris
-# 	${INSTALL_DATA} ${WRKSRC}/doc/faq/faq.pdf \
-# 		${DESTDIR}${PREFIX}/share/doc/gerris
+pre-configure:
+	cd ${WRKSRC} && sh autoreconf -fiv
 
 TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/modules/
 TEST_TARGET=		check

@@ -1,0 +1,18 @@
+$NetBSD$
+
+--- doc/examples/Makefile.am.orig	2013-12-06 15:51:21.000000000 +0000
++++ doc/examples/Makefile.am
+@@ -121,11 +121,11 @@ INCLUDES = -I$(top_srcdir)/src -I$(inclu
+ noinst_PROGRAMS = classes modules
+ 
+ classes: classes.c $(top_srcdir)/src/init.c
+-	$(LIBTOOL) --mode=link $(CC) $(AM_CFLAGS) $(INCLUDES) -DFTT_2D=1 \
++	$(LIBTOOL) --tag=CC --mode=link $(CC) $(AM_CFLAGS) $(INCLUDES) -DFTT_2D=1 \
+ 	classes.c -o classes $(GFS2D_LIBS)
+ 
+ modules: modules.c
+-	$(LIBTOOL) --mode=link $(CC) $(AM_CFLAGS) $(INCLUDES) -DFTT_2D=1 \
++	$(LIBTOOL) --tag=CC --mode=link $(CC) $(AM_CFLAGS) $(INCLUDES) -DFTT_2D=1 \
+ 	modules.c -o modules $(GFS2D_LIBS)
+ 
+ publish: examples.tar.gz

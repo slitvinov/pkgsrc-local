@@ -1,0 +1,13 @@
+$NetBSD$
+
+--- doc/Makefile.am.orig	2013-12-06 15:51:21.000000000 +0000
++++ doc/Makefile.am
+@@ -10,7 +10,7 @@ INCLUDES = -I$(top_srcdir)/src -I$(inclu
+             $(GTS_CFLAGS)
+ 
+ autoclass: autoclass.c $(top_srcdir)/src/init.c
+-	$(LIBTOOL) --mode=link $(CC) $(AM_CFLAGS) $(INCLUDES) -DFTT_2D=1 \
++	$(LIBTOOL) --tag=CC --mode=link $(CC) $(AM_CFLAGS) $(INCLUDES) -DFTT_2D=1 \
+ 	autoclass.c -o autoclass $(GFS2D_LIBS)
+ 
+ reference: Makefile.am autoclass share/autoclass.sh share/doxfilter share/renamemodules doxy.conf
