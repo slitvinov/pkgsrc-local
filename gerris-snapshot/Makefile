@@ -19,7 +19,6 @@ USE_TOOLS+=	pkg-config pax autoconf automake autoreconf
 USE_LANGUAGES=	c fortran77
 
 PKGCONFIG_OVERRIDE+=	src/gerris2D.pc.in
-#PKGCONFIG_OVERRIDE+=	src/gerris2D3.pc.in
 PKGCONFIG_OVERRIDE+=	src/gerris3D.pc.in
 
 REPLACE_PYTHON+=	doc/examples/gfs2doc.in
@@ -27,14 +26,12 @@ REPLACE_PYTHON+=	doc/examples/gfs2doc.in
 pre-configure:
 	cd ${WRKSRC} && sh autoreconf -fiv
 
-TEST_ENV+=		LD_LIBRARY_PATH=${WRKSRC}/modules/
-TEST_TARGET=		check
-
 .include "../../parallel/mpi-ch/buildlink3.mk"
 .include "../../devel/netcdf/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
 .include "../../math/gsl/buildlink3.mk"
 .include "../../wip/gts-snapshot/buildlink3.mk"
+.include "../../wip/hypre/buildlink3.mk"
 .include "../../lang/python/application.mk"
 .include "../../mk/bsd.pkg.mk"
