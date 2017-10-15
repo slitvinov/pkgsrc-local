@@ -71,6 +71,8 @@ lib/gerris/libculvert2D.la
 lib/gerris/libdf33D.la
 lib/gerris/libelectrohydro2D.la
 lib/gerris/libelectrohydro3D.la
+lib/gerris/libhypre2D.la
+lib/gerris/libhypre3D.la
 lib/gerris/liblayered2D.la
 lib/gerris/libokada2D.la
 lib/gerris/libokada3D.la
@@ -114,12 +116,12 @@ man/man1/xyz2rsurface.1
 share/gerris/build_function
 share/gerris/gerris.dic
 share/gerris/gfs-keywords.el
-share/gerris/gfs.hva
-share/gerris/gfs2tex.py
-share/gerris/gfs.lang
 share/gerris/gfs-mode.el
+share/gerris/gfs.hva
+share/gerris/gfs.lang
 share/gerris/gfs.php
 share/gerris/gfs.sty
+share/gerris/gfs2tex.py
 share/gerris/kaltura.sh
 share/gerris/libtool
 share/gerris/m4.awk
